@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+	</head>
+	<body>
+	<input type="range" min="0" max="200" id="cx" value = "50" oninput="func()"/>
+	<input type="range" min="0" max="200" id="cy" value = "50" oninput="func()"/>
+	<input type="range" min="0" max="200" id="r" value = "40" oninput="func()"/>
+	<input id="fill" value = "yellow" oninput="func()"/>
+	<script>
+	function func(){
+	var inCX = document.getElementById("cx");
+	var inCY = document.getElementById("cy");
+	var inR = document.getElementById("r");
+	var inFILL = document.getElementById("fill");
+	var out = document.getElementById("svg_out");
+	out.innerHTML = '<circle cx="'+inCX.value+
+					'" cy="'+inCY.value+
+					'" r="'+inR.value+
+					'" fill="'+inFILL.value+'"/>';
+	}
+	</script>
+<svg width="800" height="600" id="svg_out">
+</svg>;
+	</body>
+</html>
