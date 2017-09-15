@@ -6,18 +6,19 @@
 	<body>
 	<div id="div_out" style="white-space:pre;"></div>
 	<input id="edge" value = "" oninput="step1()"/>
-	
 	<script>
-	var out = document.getElementById("div_out");
-	var inEdge = document.getElementById("edge");
-	function step1(){
-		var inEdge = 
-		if (edge <=0){
-		out.innerHTML = "Ошибка"ж
-		return;
+		var out = document.getElementById("div_out");
+		var inEdge = document.getElementById("edge");
+		function step1()
+		{
+			if (inEdge.value <= 0)
+			{
+				out.innerHTML = "Ошибка";
+				return;
+			}
+			else
+			out.innerHTML = 6 * Math.pow(parseFloat(inEdge.value), 2);
 		}
-		out.innerHTML = 6* Math.pow(parseFloat(inEdge.value), 2);
-	}
 	</script>
 	</body>
 </html>
