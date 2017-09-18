@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+	</head>
+	<body>
+		<div id = "div_out" style = "white-space:pre;">
+		</div>
+		<input id = "in" oninput = "step1()"/>
+		<script>
+		var input = document.getElementById("in");
+		var output = document.getElementById("div_out");
+		function step1()
+		{
+			output.innerHTML = input.value + " нас не остановят!";
+		}
+		</script>
+	
+	</body>
+</html>

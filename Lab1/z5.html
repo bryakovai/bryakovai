@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+	</head>
+	<body>
+		Способ 1
+		<div id = "div_out_1" style = "white-space:pre;">
+		</div>
+		<input id = "in_a_1" oninput = "step1()"/>
+		<input id = "in_b_1" oninput = "step1()"/>
+		<script>
+		var input_a_1 = document.getElementById("in_a_1");
+		var input_b_1 = document.getElementById("in_b_1");
+		var output_1 = document.getElementById("div_out_1");
+		function step1()
+		{
+			output_1.innerHTML = input_b_1.value + " " + input_a_1.value;
+		}
+		</script>
+		<br>
+		Способ 2
+		<div id = "div_out_2" style = "white-space:pre;">
+		</div>
+		<input id = "in_2_1" value = "начало" onclick = "step2()"/>
+		<input id = "in_2_2" value = "конец" onclick = "step2()"/>
+		<script>
+		var input_2_1 = document.getElementById("in_2_1");
+		var input_2_2 = document.getElementById("in_2_2");
+		var output_2 = document.getElementById("div_out_2");
+		function step2()
+		{
+			output_2.innerHTML = input_2_2.value + " " + input_2_1.value;
+		}
+		</script>
+		<br>
+		Способ 3
+		<div id = "div_out_3" style = "white-space:pre;">
+		</div>
+		<input id = "in_3" type = "button" value = "Вывод" onclick = "step3()"/>
+		<script>
+		var input_3_1 = "начало";
+		var input_3_2 = "конец";
+		var output_3 = document.getElementById("div_out_3");
+		function step3()
+		{
+			output_3.innerHTML = input_3_2 + " " + input_3_1;
+		}
+		</script>
+	</body>
+</html>

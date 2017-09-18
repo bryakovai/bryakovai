@@ -4,44 +4,72 @@
 		<meta charset="utf-8"/>
 	</head>
 	<body>
-	<div id="div_out" style="white-space:pre;">
-	</div>
-	<input type = "button" value = "шаг 1" onclick="step1()"/>
-	<input type = "button" value = "шаг 2" onclick="step2()"/>
-	<input type = "button" value = "шаг 6" onclick="step6()"/>
+		<div id="div_out" style="white-space:pre;">
+		</div>
+		<input type = "button" value = "шаг 1" onclick = "step1()"/>
+		<input type = "button" value = "шаг 2" onclick = "step2()"/>
+		<input type = "button" value = "шаг 3" onclick = "step3()"/>
+		<input type = "button" value = "шаг 4" onclick = "step4()"/>
+		<input type = "button" value = "шаг 5" onclick = "step5()/">
+		<input type = "button" value = "шаг 6" onclick = "step6()"/>
 	<script>
-	var out = document.getElementById("div_out");
-	function step1(){
-	out.style.color = "green";
-	out.innerHTML = "+---+\n"+
-					"|   |\n"+
-					"|   |\n"+
-					"+---+\n";
-	console.log(out.style);
-	}
-	function step2(){
-	out.style.color = "red";
-	out.innerHTML = "#\n"+
-					"##\n"+
-					"###\n"+
-					"####\n";
-	}
-	function step2(){
-	out.style.color = "red";
-	out.innerHTML = "#\n"+
-					"##\n"+
-					"###\n"+
-					"####\n";
-	}
-	function step6(){
-	out.style.color = "blue";
-	out.innerHTML = '<h1>Мой первый векторный рисунок</h1>'+
-					'<svg width="800" height="600">'+
-					'<circle cx="50" cy="50" r="40" stroke="green"'+
-					'stroke-width="4" fill="yellow"/>'+
-					'</svg>';
-	}
-	out.style.fontFamily = "monospace";
+		var out = document.getElementById("div_out");
+		function step1()
+		{
+			out.style.color = "green";
+			out.innerHTML = "+---+\n"+
+							"|   |\n"+
+							"|   |\n"+
+							"+---+\n";
+			//console.log(out.style);
+		}
+		function step2()
+		{
+			out.style.color = "red";
+			out.innerHTML = "#\n"+
+							"##\n"+
+							"###\n"+
+							"####\n";
+		}
+		function step3()
+		{
+			out.innerHTML = "---";
+			/*				" /\\n"+
+							"//\\\n"+
+							"//\\\n"+
+							" ][\n";*/
+		}
+		function step4()
+		{
+			out.innerHTML = '{ "x":15, "y": 28.7 }'
+		}
+		function step5()
+		{
+			out.innerHTML = 'Три девицы под окном\n'+
+							'Пряли поздно вечерком.\n'+
+							'"Кабы я была царица, —\n'+
+							'Говорит одна девица, —\n'+
+							'То на весь крещеный мир\n'+
+							'Приготовила б я пир".\n'+
+							'"Кабы я была царица, —\n'+
+							'Говорит ее сестрица, —\n'+
+							'То на весь бы мир одна\n'+
+							'Наткала я полотна".\n'+
+							'"Кабы я была царица, —\n'+
+							'Третья молвила сестрица, —\n'+
+							'Я б для батюшки-царя\n'+
+							'Родила богатыря".';
+		}
+		function step6()
+		{
+			out.style.color = "blue";
+			out.innerHTML = '<h1>Мой первый векторный рисунок</h1>'+
+							'<svg width="800" height="600">'+
+							'<circle cx="50" cy="50" r="40" stroke="green"'+
+							'stroke-width="4" fill="yellow"/>'+
+							'</svg>';
+		}
+		out.style.fontFamily = "monospace";
 	</script>
 	</body>
 </html>

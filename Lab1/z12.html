@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+	</head>
+	<body>
+		<div id="div_out" style="white-space:pre;">
+		</div>
+		<input id="input_user" oninput = "step1()"/>
+		<input id="input_pass" oninput = "step1()"/>
+		<input id="input_host" oninput = "step1()"/>
+		<input id="input_port" oninput = "step1()"/>
+		<input id="input_db" oninput = "step1()"/>
+		<script>
+		function step1()
+		{
+			var out = document.getElementById("div_out");
+			var in_1 = document.getElementById("input_user");
+			var in_2 = document.getElementById("input_pass");
+			var in_3 = document.getElementById("input_host");
+			var in_4 = document.getElementById("input_port");
+			var in_5 = document.getElementById("input_db");
+			out.innerHTML = "User ID=" +
+							in_1.value +
+							";Password=" +
+							in_2.value +
+							";Host=" +
+							in_3.value +
+							";Port=" +
+							in_4.value +
+							";Database=" +
+							in_5.value +
+							";";
+		}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+	</head>
+	<body>
+		Способ 1
+		<div id = "div_out_1" style = "white-space:pre;">
+		</div>
+		<input id = "in_1" oninput = "step1()"/>
+		<script>
+		var input_1 = document.getElementById("in_1");
+		var output_1 = document.getElementById("div_out_1");
+		function step1()
+		{
+			output_1.innerHTML = "Программирование это " + input_1.value + "!";
+		}
+		</script>
+		<br>
+		Способ 2
+		<div id = "div_out_2" style = "white-space:pre;">
+		</div>
+		<input id = "in_2_1" value = "Программирование это "/>
+		<input id = "in_2_2" oninput = "step2()"/>
+		<input id = "in_2_3" value = "!"/>
+		<script>
+		var input_2_1 = document.getElementById("in_2_1");
+		var input_2_2 = document.getElementById("in_2_2");
+		var input_2_3 = document.getElementById("in_2_3");
+		var output_2 = document.getElementById("div_out_2");
+		function step2()
+		{
+			output_2.innerHTML = input_2_1.value + input_2_2.value + input_2_3.value;
+		}
+		</script>
+		<br>
+		Способ 3
+		<div id = "div_out_3" style = "white-space:pre;">
+		</div>
+		<input id = "in_3" type = "button" value = "Вывод" onclick = "step3()"/>
+		<script>
+		var input_3_1 = "Программирование это ";
+		var input_3_2 = "перспективно";
+		var input_3_3 = "!";
+		var output_3 = document.getElementById("div_out_3");
+		function step3()
+		{
+			output_3.innerHTML = input_3_1 + input_3_2 + input_3_3;
+		}
+		</script>
+	</body>
+</html>

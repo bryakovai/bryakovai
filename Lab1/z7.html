@@ -6,12 +6,13 @@
 	<body>
 		<div id="div_out" style="white-space:pre;">
 		</div>
-		<input id="input" type = "button" value = "Start" onclick = "step1()"/>
+		<input id="input" oninput = "step1()"/>
 		<script>
 		function step1()
 		{
 			var out = document.getElementById("div_out");
-			out.innerHTML = Math.PI.toFixed(4)+"<br>"+Math.E.toFixed(4);
+			var input = document.getElementById("input");
+			out.innerHTML = parseFloat(input.value).toFixed(4);
 		}
 		</script>
 	</body>
