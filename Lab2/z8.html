@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+	</head>
+	<body>
+	<div id="div_out" style="white-space:pre;"></div>
+	<input id="total" value = "" oninput="step1()"/>
+	<input id="part" value = "" oninput="step1()"/>
+	<script>
+		var out = document.getElementById("div_out");
+		var inT = document.getElementById("total");
+		var inP = document.getElementById("part");
+		function step1()
+		{
+			if (inT.value <= 0)
+			{
+				out.innerHTML = "Значение totalInM должно быть положительным";
+				return;
+			}
+			else
+			if (inP.value <= 0)
+			{
+				out.innerHTML = "Значение partInCm должно быть положительным";
+				return;
+			}
+			else			
+			out.innerHTML = ((inT.value * 100 - ((inT.value * 100) % inP.value)) / inP.value) + " шт и " + ((inT.value * 100) % inP.value) + " см";
+		}
+	</script>
+	</body>
+</html>

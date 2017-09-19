@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+	</head>
+	<body>
+	<div id="div_out" style="white-space:pre;"></div>
+	<input id="base" value = "" oninput="step1()"/>
+	<input id="height" value = "" oninput="step1()"/>
+	<script>
+		var out = document.getElementById("div_out");
+		var inBase = document.getElementById("base");
+		var inHeight = document.getElementById("height");
+		function step1()
+		{
+			if (inBase.value <= 0)
+			{
+				out.innerHTML = "Значение base должно быть положительным";
+				return;
+			}
+			else
+			if (inHeight.value <= 0)
+			{
+				out.innerHTML = "Значение height должно быть положительным";
+				return;
+			}
+			else
+			out.innerHTML = (inBase.value * inHeight.value / 2).toFixed(2);
+		}
+	</script>
+	</body>
+</html>

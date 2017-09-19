@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+	</head>
+	<body>
+	<div id="div_out" style="white-space:pre;"></div>
+	<input id="a" value = "" oninput="step1()"/>
+	<input id="b" value = "" oninput="step1()"/>
+	<script>
+		var out = document.getElementById("div_out");
+		var inA = document.getElementById("a");
+		var inB = document.getElementById("b");
+		function step1()
+		{
+			if (inB.value > 0)
+			{
+				out.innerHTML = "Значение B должно быть не положительным";
+				return;
+			}
+			else
+				out.innerHTML = (inA.value * Math.sqrt((-7) * inB.value)).toFixed(4);
+		}
+	</script>
+	</body>
+</html>

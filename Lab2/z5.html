@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+	</head>
+	<body>
+	<div id="div_out" style="white-space:pre;"></div>
+	<input id="r" value = "" oninput="step1()"/>
+	<script>
+		var out = document.getElementById("div_out");
+		var inR = document.getElementById("r");
+		function step1()
+		{
+			if (inR.value <= 0)
+			{
+				out.innerHTML = "Значение radius должно быть положительным";
+				return;
+			}
+			else
+			out.innerHTML = (4 * Math.PI * Math.pow((inR.value), 3)/3).toFixed(4);
+		}
+	</script>
+	</body>
+</html>

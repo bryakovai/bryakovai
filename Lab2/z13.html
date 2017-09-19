@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+	</head>
+	<body>
+	<div id="div_out" style="white-space:pre;"></div>
+	<input id="x" value = "" oninput="step1()"/>
+	<script>
+		var out = document.getElementById("div_out");
+		var inX = document.getElementById("x");
+		function step1()
+		{
+			if (inX.value > 61)
+			{
+				out.innerHTML = "Подкоренное выражение должно быть неотрицательным";
+				return;
+			}
+			else
+			if ((3 * Math.sqrt(61 - inX.value)).toFixed(4) - (3 * Math.sqrt(61 - inX.value)).toFixed(0) == 0.0000)
+			{
+				out.innerHTML = (3 * Math.sqrt(61 - inX.value)).toFixed(0);
+			}
+			else
+				out.innerHTML = (3 * Math.sqrt(61 - inX.value)).toFixed(4);
+		}
+	</script>
+	</body>
+</html>

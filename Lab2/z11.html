@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+	</head>
+	<body>
+	<div id="div_out" style="white-space:pre;"></div>
+	<input id="x" value = "" oninput="step1()"/>
+	<script>
+		var out = document.getElementById("div_out");
+		var inX = document.getElementById("x");
+		function step1()
+		{
+			if (inX.value < 0)
+			{
+				out.innerHTML = "Значение X должно быть неотрицательным";
+				return;
+			}
+			else			
+			out.innerHTML = Math.sqrt(inX.value).toFixed(4);
+		}
+	</script>
+	</body>
+</html>
