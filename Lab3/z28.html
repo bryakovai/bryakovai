@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+	</head>
+	<body>
+	<div id="div_out" style="white-space:pre;"></div>
+	<input id="w" value = "" oninput="step1()"/>
+	<script>
+		function step1()
+		{
+			var out = document.getElementById("div_out");
+			var wIn = document.getElementById("w").value;
+			if ((wIn >= 0) || (wIn <= 20))
+			{
+				var str = ""
+				for (var i = 0; i < 10; i++)
+				{
+					for (var j = 0; j < wIn + 1; j++)
+					{
+						str = str + i;
+					}
+				str = str + "\n";
+				}
+				out.innerHTML = str;
+			}
+			else
+			out.innerHTML = "Значение W должно быть в интервале [0, 20]";
+		}
+	</script>
+	</body>
+</html>

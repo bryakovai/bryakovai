@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+	</head>
+	<body>
+	<div id="div_out" style="white-space:pre;font-family: monospace;"></div>
+	<input id="w_in" oninput="step1()"/>
+	<input id="h_in" oninput="step1()"/>
+	<script>
+		function step1()
+		{
+			var out = document.getElementById("div_out");
+			var w = parseInt(document.getElementById("w_in").value);
+			var h = parseInt(document.getElementById("h_in").value);
+			if (w < 0)
+			{
+				out.innerHTML = "Значение W должно быть неотрицательно";
+				return;
+			}
+			if (h < 0)
+			{
+				out.innerHTML = "Значение H должно быть неотрицательно";
+				return;
+			}
+			if ((w == 0) || (h == 0))
+			{
+				out.innerHTML = "";
+				return;
+			}			
+			str1 = "";
+			str2 = "";
+			str3 = "";
+			str4 = "";
+			setka = "";
+			for(a = 0; a < w; a++)
+			{
+				str1 += a;
+			}
+			for(b = 0; b < h; b++)
+			{
+				for(a = 0; a < w; a++)
+				{
+					str2 += ".";
+				}
+				str3 += b + str2 + "|\n";
+				str2 = "";
+			}
+			for(a = 0; a < w; a++)
+			{
+				str4 += "-";
+			}
+			out.innerHTML = " " + str1 + "\n" + str3 + " " + str4;
+		}
+		step1();
+	</script>
+	</body>
+</html>
