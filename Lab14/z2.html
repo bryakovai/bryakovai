@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+	</head>
+	<body>
+	<script lang="javascript">
+var p1 = {
+	distanceTo(px){
+	if (typeof px == "undefined"){
+		throw new Error("Конечная точка не инициализирована")
+	}	
+	if (px == null){
+		throw new Error("Конечная точка не инициализирована")
+	}
+	var dx = px.x - this.x;
+	var dy = px.y - this.y;
+	return Math.sqrt(dx*dx+dy*dy)
+	}
+}
+var p2 = {
+
+	}
+
+p1.x = 0;
+p1.y = 0;
+p2.x = 4;
+p2.y = 3;
+var dist = p1.distanceTo(p2);
+console.log(dist);
+p1.x = 0;
+p1.y = 0;
+p2.x = 0;
+p2.y = 0;
+console.log(p1.distanceTo(p2));
+p1.x = 19;
+p1.y = 23;
+p2.x = 11;
+p2.y = 13;
+console.log(p1.distanceTo(p2));
+p1.x = 11;
+p1.y = 23;
+p2.x = 11;
+p2.y = 13;
+console.log(p1.distanceTo(p2));
+p1.x = 11;
+p1.y = 23;
+p2 = null;
+try {
+    console.log(p1.distanceTo(p2));
+} catch (ex){
+    console.log(ex.message);
+}	//
+p1.x = 31;
+p1.y = 37;
+var p2;
+try {
+    console.log(p1.distanceTo(p2));
+} catch (ex){
+    console.log(ex.message);
+}	//Конечная точка не инициализирована
+
+	</script>
+	</body>
+</html>

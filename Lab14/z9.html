@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+	</head>
+	<body>
+	<script lang="javascript">
+var p = {
+	toString(){
+	var str = "(" + this.x + ";" + this.y + ")";
+	return str;
+	},
+	setCoordinates(x,y){
+		this.x = x;
+		this.y = y;
+	}
+}
+
+var p1 = {
+	toString(){
+	var str = "(" + this.x + ";" + this.y + ")";
+	return str;
+	},
+	setCoordinates(x,y){
+		this.x = x;
+		this.y = y;
+	},
+	distanceTo(x,y){
+	if (typeof x == "object"){
+	var dx = x.x - this.x;
+	var dy = x.y - this.y;
+	return Math.sqrt(dx*dx+dy*dy)
+	}
+	else{
+	var dx = x - this.x;
+	var dy = y - this.y;
+	return Math.sqrt(dx*dx+dy*dy)
+	}
+	}
+}
+
+var p2 = {
+	toString(){
+	var str = "(" + this.x + ";" + this.y + ")";
+	return str;
+	}
+}
+	
+/*	
+}*/
+
+p.x = 31;
+p.y = 37;
+console.log(p);
+console.log(p.toString());//явный вызов строки
+
+p.setCoordinates(5,7);
+console.log(p);
+
+p1.setCoordinates(23,29);
+console.log("Distance between " + p1
+    + " to (0;0) is " + p1.distanceTo(0,0));//неявный вызов строки
+	
+p1.setCoordinates(11,13);
+p2.x = 17;
+p2.y = 19;
+console.log("Distance between " + p1
+    + " and " + p2 + " is " + p1.distanceTo(p2));
+
+	</script>
+	</body>
+</html>
